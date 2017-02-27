@@ -11,7 +11,7 @@
         <label text="Tankstation i Danmark"/>
       <link href="https://wiki.openstreetmap.org/wiki/Tag:amenity%3Dfuel"/>
       <key key="amenity" value="fuel"/>
-      <combo key="name" text="Navn" values="Circle K, F24, Go'on, Haahr, INGO, OK, Q8, Shell, Statoil, Uno-X, 1-2-3" Use_last_as_default="true"/>      
+      <combo key="name" text="Navn" values="Circle K, F24, Go'on, Haahr, ingo, OK, Q8, Shell, Statoil, Uno-X, 1-2-3" Use_last_as_default="true"/>      
     </item>
   </group>
 </presets>
