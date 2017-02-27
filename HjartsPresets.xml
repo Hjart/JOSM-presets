@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets author="Hjart" version="0.1" description="Hjarts presets for JOSM" baselanguage="da">
+  <group name="Hjarts">
+    <item name="generel adgangsvej/indkørsel" type="way" icon="presets/transport/way/way_service.svg">
+      <key key="highway" value="service"/>
+      <key key="service" value="driveway"/>
+    </item>
+    <item name="Generel asfalteret cykelsti" type="way" icon="presets/transport/way/dedicated_cycleway.svg">
+      <key key="highway" value="cycleway"/>
+      <key key="surface" value="asphalt"/>
+    </item>
+    <item name="Parkeringsplads" type="closedway" icon="presets/vehicle/parking/parking.svg">
+      <key key="amenity" value="parking" />
+    </item>
+    <item name="Kildeangivelse">
+      <combo key="source" text="Kilde" values="gps,survey,website,Wikipedia,Mapillary,Strava Cycling Heatmap" default="gps" />
+    </item>
+    <item name="Blind vej" type="node">
+      <key key="noexit" value="yes" />
+    </item>
+    <item name="Etager" type="closedway,relation">
+      <text key="building:levels" text="Antal etager" default="1" />
+    </item>
+    <item name="Roof" da.name="Tag" type="closedway">
+      <key key="building" value="roof"/>
+      <key key="layer" value="1"/>
+    </item>
+    <item name="Destinationer" type="way">
+      <link href="https://wiki.openstreetmap.org/wiki/Key:destination"/>
+      <text key="destination" text="Destinationer" />
+      <text key="destination:ref" text="destination:ref" />
+      <text key="destination:symbol" text="destination:symbol" />
+    </item>
+    <item name="Genbrugsbutik" type="node,closedway" icon="presets/misc/no_icon.svg">
+      <label text="Genbrugsbutik drevet af velgørende organisation og bemandet af frivillige med det formål at skaffe penge til organisationens formål"/>
+      <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=charity"/>
+      <key key="shop" value="charity" />
+      <key key="second_hand" value="only"/>
+      <combo key="name" text="Organisation" values="Kirkens Korshær,Røde Kors Genbrug,Blå Kors Genbrug,Y's Men's Genbrug,Mission Afrika Genbrug,Folkekirkens Nødhjælp"/>
+    </item>
+    <item name="Genbrugsbutik" type="node,closedway" icon="presets/misc/no_icon.svg">
+      <label text="Genbrugsbutik drevet af privat person med henblik på erhvervelse af løndindtægt"/>
+      <link href="http://wiki.openstreetmap.org/wiki/Tag:shop=second_hand"/>
+      <text key="name" text="Navn"/>
+      <key key="shop" value="second_hand" />
+    </item>
+    <item name="Dyrepension" type="node,closedway" icon="presets/misc/no_icon.svg">
+      <label text="Hjarts/Dyrepension"/>
+      <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=animal_boarding"/>
+      <key key="animal" value="animal_boarding" />
+      <text key="name" text="Navn" />
+      <combo key="animal_boarding" text="Kæledyr" values="dog,cat,horse,fish,bird"/>
+    </item>
+    <item name="Gylletank" type="closedway" icon="presets/landmark/storage_tank.svg">
+      <key key="man_made" value="storage_tank" />
+      <key key="content" value="slurry" />      
+    </item>
+    <item name="Gylletank2" type="closedway" icon="presets/landmark/storage_tank.svg">
+      <link href="https://wiki.openstreetmap.org/wiki/Tag:building%3Dslurry_tank"/>
+      <key key="building" value="slurry_tank" />
+    </item>
+    <item name="ois:fixme">
+      <combo key="ois:fixme" text="problem" values="Bygninger fjernet" />
+    </item>
+    <item name="flaskeautomat">
+        <key key="amenity" value="recycling"/>
+      <key key="recycling_type" value="reverse_vending_machine" />
+    </item>
+    <item name="Fitness Center" icon="presets/sport/fitness_centre.svg">
+      <text key="name" text="Name" da.text="Navn"/>
+      <key key="leisure" value="fitness_centre" />
+    </item>
+    <item name="Flyveplads" type="node,closedway" icon="presets/transport/airport.svg">
+      <label text="Hjarts/Flyveplads"/>
+      <link href="https://wiki.openstreetmap.org/wiki/Tag:aeroway%3Daerodrome"/>
+      <text key="name" text="Navn"/>
+      <text key="icao" text="icao"/>
+      <text key="iata" text="iata"/>
+      <key key="aeroway" value="aerodrome"/>
+      <combo key="aerodrome" text="Type" values="airsport,private,public"/>
+      <text key="ele" text="elevation"/>
+      <text key="operator" text="operator"/>
+      <text key="website" text="website"/>
+    </item>    
+    <item name="Historisk vindmølle" type="node,closedway" icon="presets/landmark/windmill.svg">
+      <label text="Hjarts/Vindmølle"/>
+      <link href="http://wiki.openstreetmap.org/wiki/Tag:man_made=windmill"/>
+      <key key="man_made" value="windmill" />
+      <text key="name" text="Møllens navn"/>
+      <combo key="windmill:type" text="Type" values="post,smock,tower" default="smock"/>
+      <text key="start_date" text="Byggeår"/>
+      <text key="wikidata" text="Wikidata item"/>
+      <check key="functional" text="Er den stadig fuldt funktionsdygtig?" />
+      <check key="building" value_on="windmill" text="Er det passende at tagge den som en bygning?" disable_off="true" />
+      <check key="tourism" value_on="attraction" text="Er den en Turistattraktion?" disable_off="true" />
+      <check key="windmill:vanes" text="Har den stadig vinger?" />
+    </item>
+    <item name="Primitiv Teltplads" type="node,closedway" icon="presets/accommodation/camping.svg">
+      <label text="Hjarts/Primitiv Teltplads"/>
+      <link href="https://wiki.openstreetmap.org/wiki/Tag:tourism%3Dcamp_site"/>
+      <text key="name" text="navn" />
+      <key key="tourism" value="camp_site"/>
+      <key key="backcountry" value="yes"/>
+      <key key="caravans" value="no"/>
+      <check key="openfire" text="Bålplads"/>
+    </item>
+    <item name="Shelter" type="node,closedway" icon="presets/accommodation/shelter_lean_to.svg">
+      <label text="Hjarts/Shelter"/>
+      <link href="https://wiki.openstreetmap.org/wiki/Tag:shelter_type%3Dlean_to"/>
+      <key key="amenity" value="shelter" />
+      <key key="shelter_type" value="lean_to" />
+    </item>
+    <group name="Hastighedsbegrænsning">
+      <item name="Maxfart i byen" type="way">
+        <key key="source:maxspeed" value="DK:urban"/>
+        <key key="maxspeed" value="50"/>
+      </item>
+      <item name="Maxfart på landet" type="way">
+        <key key="source:maxspeed" value="DK:rural"/>
+        <key key="maxspeed" value="80"/>
+      </item>
+      <item name="Maxfart ifølge skilt" type="way">
+        <key key="source:maxspeed" value="sign"/>
+        <combo key="maxspeed" text="Skiltet hastighedsbegrænsning" values="20,30,40,50,60,70,90" default="40"/>
+      </item>
+    </group>
+    <item name="Folkekirke" type="node,closedway" icon="presets/religion/church.svg">
+      <link href="http://wiki.openstreetmap.org/wiki/Tag:amenity=place_of_worship"/>
+      <label text="Hjarts/Folkekirke" />
+      <text key="name" da.text="navn" />
+      <key key="amenity" value="place_of_worship" />
+      <key key="religion" value="christian" />
+      <key key="denomination" value="lutheran" />
+      <key key="building" value="church" />
+    </item>
+    <separator/>
+    <item name="Rasteplads" type="way" icon="presets/vehicle/rest_area.svg">
+      <label text="Hjarts/Rasteplads" />
+      <text key="name" text="navn" />
+      <key key="highway" value="service" />
+      <key key="service" value="rest_area" />
+    </item>
+    <item name="Belægning" type="way,closedway">
+      <label text="Hjarts/Belægning" />
+      <combo key="surface" text="Belægning" values="asphalt,pebblestone,ground,grass,paving_stones,cobblestone,wood,gravel" default="pebblestone" required="true"/>
+    </item>
+    <group name="Oldtidsminder" icon="presets/sightseeing/archaeological.svg">
+      <item name="Gravhøj" type="node,closedway">
+        <text key="name" text="Navn" />
+        <key key="historic" value="archaeological_site"/>
+        <key key="site_type" value="tumulus"/>
+      </item>
+      <item name="Stendysse" type="node,closedway">
+        <text key="name" text="Navn" />
+        <key key="historic" value="archaeological_site"/>
+        <key key="site_type" value="megalith"/>
+        <key key="megalith_type" value="dolmen"/>
+      </item>
+      <item name="Jættestue" type="node,closedway">
+        <text key="name" text="Navn" />
+        <key key="historic" value="archaeological_site"/>
+        <key key="site_type" value="megalith"/>
+        <key key="megalith_type" value="dolmen"/>
+      </item>
+      <item name="Long_barrow" da.name="Langdysse" type="node,closedway">
+        <text key="name" text="Navn" />
+        <key key="historic" value="archaeological_site"/>
+        <key key="site_type" value="megalith"/>
+        <key key="megalith_type" value="long_barrow"/>
+      </item>
+      <item name="Helleristning" type="node,closedway">
+        <text key="name" text="Navn" />
+        <key key="historic" value="archaeological_site"/>
+        <key key="site_type" value="petroglyph"/>
+      </item>
+    </group>
+  </group>
+</presets>
